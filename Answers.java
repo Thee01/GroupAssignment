@@ -3,7 +3,7 @@
 ****************************/
 package finalProject1400;
 
-public class Answers {
+public class ZodiacAscii {
 	/**
 	 * 
 	 * @param index
