@@ -27,16 +27,15 @@ public class Dialogue {
 		}
 	}
 
-	public void question1() {
-		System.out.println("Good for you! Next Question.");
-	}
-
-	public void question2() {
-		System.out.println("Yikes. Okay, next.");
-	}
-
-	public void question3() {
-		System.out.println("Honestly I wouldn't want to do that but to each their own.");
+	public String questionReplies(int n){
+		String[] questionRepliesArray = {
+			"n/a",
+			"Good for you! Next Question.", // Q1
+			"Yikes. Okay, next.", // Q2
+			"Honestly I wouldn't want to do that but to each their own.", // Q3
+			//continue with addt'l question replies
+			};
+		return questionRepliesArray[n];
 	}
 
 	public void question3Choice13() {
