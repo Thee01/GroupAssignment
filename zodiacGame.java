@@ -28,14 +28,16 @@ public class zodiacGame {
 	 * 
 	 * @return
 	 */
-	private static void getInput() {
-		int userChoice;
-
+		private static void getInput() {
+		int userChoice = 0;
 		do {
 			userChoice = input.nextInt();
-			calculate.addUserChoice(userChoice);
+			if (userChoice == 0) {
+				System.out.println("Are you kidding me? This is really simple. 1-12. Try again");
+			} else {
+				calculate.addUserChoice(userChoice);
+			}
 		} while (userChoice < 1 || userChoice > 12);
-
 	}
 
 	/**
