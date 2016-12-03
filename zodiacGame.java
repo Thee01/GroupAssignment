@@ -7,14 +7,22 @@ public class ZodiacGame {
 	private static Calculate calculate = new Calculate();
 	private static Questions questions = new Questions();
 	private static Dialogue dialogue = new Dialogue();
+	private static ZodiacASCIIArt art = new ZodiacASCIIArt();
 
 	public static void main(String[] args) {
-
+		art.title();
+		System.out.println();
+		dialogue.greeting();
+		System.out.println();
+		
 		for (int i = 0; i < 3; i++) { //can we please have this start at 1?
 			displayQuestions(i);
 			getInput();
-			dialogue.questionReplies(i);
+			System.out.println(dialogue.questionReplies(i));
+			System.out.println();
 		}
+		System.out.println();
+		
 		displayUsersZodiacSign();
 	
 	}
@@ -47,10 +55,8 @@ public class ZodiacGame {
 	 * gets the index with the highest
 	 */
 	private static void displayUsersZodiacSign() {
-		Answers answers = new Answers();
-
 		int zodiacSignIndex = calculate.getUsersZodiacSign();
-
-		System.out.println(answers.getAnswer(zodiacSignIndex));
+		System.out.println("You're a " + calculate.zodiacSign(zodiacSignIndex));
+		System.out.print(art.zodiacSignArt(zodiacSignIndex));
 	}
 }
