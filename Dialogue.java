@@ -10,10 +10,10 @@ public class Dialogue {
 	Scanner input = new Scanner(System.in);
 
 	public void greeting() {
-		System.out.println("Hi. What's your name?");
+		System.out.println("Hi. What's your name? ");
 		String name = input.nextLine();
 		System.out.printf(
-				"Hi %s. My name is 'Zodiac guess game 2.0 %n" + "Do you want to talk about astrology? (Yes/No)", name);
+				"Hi %s. My name is 'Zodiac guess game 2.0. Do you want to talk about astrology? (Yes/No) ", name);
 		String yesOrNo = input.next();
 		switch (yesOrNo.toUpperCase()) {
 		case "YES":
