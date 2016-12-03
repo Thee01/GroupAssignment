@@ -12,19 +12,25 @@ public class Dialogue {
 	public void greeting() {
 		System.out.print("Hi. What's your name? ");
 		String name = input.nextLine();
-		System.out.printf(
-				"Hi %s. My name is 'Zodiac guess game 2.0. Do you want to talk about astrology? (Yes/No) ", name);
-		String yesOrNo = input.next();
-		switch (yesOrNo.toUpperCase()) {
-		case "YES":
-			System.out.println("Yas! I bet I can guess what your zodiac sign is. Let's do this.");
-			break;
-		case "NO":
-			System.out.println(
-					"What, like you have something better to do? SIT DOWN. I bet I can guess what your sign is. Let's do this.");
-			break;
-		// add default?
-		}
+		
+		//do{
+			System.out.printf(
+					"Hi %s. My name is 'Zodiac guess game 2.0. Do you want to talk about astrology? (Yes/No) ", name);
+			String yesOrNo = input.next();
+		
+			switch (yesOrNo.toUpperCase()) {
+				case "YES":
+					System.out.println("Yas! I bet I can guess what your zodiac sign is. Let's do this.");
+					break;
+				case "NO":
+					System.out.println(
+							"What, like you have something better to do? SIT DOWN. I bet I can guess what your sign is. Let's do this.");
+					break;
+				default:
+						System.out.println("Wanna try that again?"); //get this to loop
+			}
+		//} while(switch == default);
+		
 	}
 
 	public String questionReplies(int n){
