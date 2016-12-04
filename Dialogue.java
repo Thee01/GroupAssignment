@@ -8,11 +8,37 @@ import java.util.Scanner;
 public class Dialogue {
 
 	Scanner input = new Scanner(System.in);
-
+//Kenneth dec 3  
+//
+//fixed the do while by adding a boolean that will decide when to exit the do while loop
+//Also added some line spacing to make console easier to read
+	
 	public void greeting() {
 		System.out.print("Hi. What's your name? ");
 		String name = input.nextLine();
 		
+		boolean yesOrNoChoosen = false;
+		do{
+			System.out.printf(
+					"Hi %s. My name is 'Zodiac guess game 2.0. Do you want to talk about astrology? (Yes/No) ", name);
+			String yesOrNo = input.next().toUpperCase();
+			
+			switch (yesOrNo) {
+				case "YES":
+					System.out.printf("%nYas! I bet I can guess what your zodiac sign is. Let's do this. %n%n");
+					yesOrNoChoosen = true;
+					break;
+				case "NO":
+					System.out.printf(
+							"%nWhat, like you have something better to do? SIT DOWN. I bet I can guess what your sign is. Let's do this. %n%n");
+					yesOrNoChoosen = true;
+					break;
+				default:
+						System.out.printf("%nWanna try that again?%n%n"); //get this to loop
+			}
+		} while(yesOrNoChoosen == false);
+	}	
+		/*
 		//do{
 			System.out.printf(
 					"Hi %s. My name is 'Zodiac guess game 2.0. Do you want to talk about astrology? (Yes/No) ", name);
@@ -30,7 +56,8 @@ public class Dialogue {
 						System.out.println("Wanna try that again?"); //get this to loop
 			}
 		//} while(switch == default);
-		
+		*/
+//Kenneth dec 3
 	}
 
 	public String questionReplies(int n){
