@@ -14,6 +14,7 @@ public class Dialogue {
 //Also added some line spacing to make console easier to read
 	
 	public void greeting() {
+		System.out.println(art.getTitle());
 		System.out.print("Hi. What's your name? ");
 		String name = input.nextLine();
 		
