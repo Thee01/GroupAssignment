@@ -11,7 +11,6 @@ public class ZodiacGame {
 
 	public static void main(String[] args) {
 		art.title();
-		System.out.println();
 		dialogue.greeting();
 		System.out.println();
 		
@@ -51,12 +50,18 @@ public class ZodiacGame {
 		} while (userChoice < 1 || userChoice > 12);
 	}
 
+//Kenneth duran dec 3
+//Added the ascii art
 	/**
 	 * gets the index with the highest
 	 */
 	private static void displayUsersZodiacSign() {
+		Answers answers = new Answers();
+
 		int zodiacSignIndex = calculate.getUsersZodiacSign();
-		System.out.println("You're a " + calculate.zodiacSign(zodiacSignIndex));
-		System.out.print(art.zodiacSignArt(zodiacSignIndex));
+
+		System.out.println(answers.getAnswer(zodiacSignIndex));
+		System.out.println(art.getZodiacSignArt(zodiacSignIndex));
 	}
+//Kenneth duran dec 3
 }
