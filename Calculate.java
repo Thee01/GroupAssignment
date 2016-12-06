@@ -1,15 +1,11 @@
-/*********************************************
-* Author: Chloe
-* add all values from user choices and 
-* calculate sign
-*********************************************/
+/*
+ * logic to calculate user's sign
+ */
+
 package zodiacGame;
 
 import java.util.Scanner;
-/**
- * @author chloe_000
- *
- */
+
 public class Calculate{
    Scanner input = new Scanner(System.in);
    private int[] zodiacChoices = new int[13];
@@ -43,18 +39,18 @@ public class Calculate{
    public String zodiacSign(int n){
 	   String[] signs = {
 			   "n/a",
-			   "Aries",
-			   "Taurus",
-			   "Gemini",
-			   "Cancer",
-			   "Leo",
-			   "Virgo",
-			   "Libra",
-			   "Scorpio",
-			   "Sagittarius",
-			   "Capricorn",
-			   "Aquarius",
-			   "Pisces"};
+			   "A R I E S",
+			   "T A U R U S",
+			   "G E M I N I",
+			   "C A N C E R",
+			   "L E O",
+			   "V I R G O",
+			   "L I B R A",
+			   "S C O R P I O",
+			   "S A G I T A R R I U S",
+			   "C A P R I C O R N",
+			   "A Q U A R I U S",
+			   "P I S C E S"};
 	   return signs[n];
    }
    
