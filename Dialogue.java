@@ -1,22 +1,21 @@
-/****************************
-* Author: Chloe and Jude
-****************************/
+/***********************************
+ * dialogue class holds dialogue
+ * methods
+ */
 package zodiacGame;
 
 import java.util.Scanner;
 
 public class Dialogue {
-
+	private static ZodiacASCIIArt art = new ZodiacASCIIArt();
 	Scanner input = new Scanner(System.in);
-//Kenneth dec 3  
-//
-//fixed the do while by adding a boolean that will decide when to exit the do while loop
-//Also added some line spacing to make console easier to read
+	
+	private String name;
 	
 	public void greeting() {
 		System.out.println(art.getTitle());
 		System.out.print("Hi. What's your name? ");
-		String name = input.nextLine();
+		this.name = input.nextLine();
 		
 		boolean yesOrNoChoosen = false;
 		do{
@@ -35,17 +34,19 @@ public class Dialogue {
 					yesOrNoChoosen = true;
 					break;
 				default:
-						System.out.printf("%nWanna try that again?%n%n"); //get this to loop
+						System.out.printf("%nWanna try that again?%n%n"); 
 			}
 		} while(yesOrNoChoosen == false);
-	    }	
+	}	
+	public String getName(){
+		return name;
 	}
-//dec 5 kenneth duran added the rest of the dialogue that displays after the user answers a question
 	public String questionReplies(int n) {
-		String[] questionRepliesArray = { 		"n/a",
-				"Good for you! Next Question.", // Q1
-				"Yikes. You should work on that. Next!", // Q2
-				"I would be insecure about that too... anyways. Next question.", // Q3
+		String[] questionRepliesArray = { 		
+				"n/a",
+				"Good for you! Next Question.", 
+				"Yikes. You should work on that. Next!", 
+				"I would be insecure about that too... anyways. Next question.",
 				"Very revealing. Let's move on",
 				"Good luck with that.",
 				"You are gonna go far kid.",
@@ -54,13 +55,12 @@ public class Dialogue {
 				"Sounds dreamy. We should go sometime.",
 				"Almost there.",
 				"AWKWARD.",
-				" I mean.. I guess that sounds reasonable?",
-				"SPICY! I think I know exactly what your sign is.", // Q3
-				// continue with addt'l question replies
+				"I mean.. I guess that sounds reasonable?",
+				"SPICY! I think I know exactly what your sign is.", 
 		};
 		return questionRepliesArray[n];
 	}
-//dec 5 kenneth duran
+
 	public void question3Choice13() {
 		System.out.println("Did I ask you to tell me your dream job wasn't on this list?");
 		String yesOrNo = input.next();
@@ -75,4 +75,7 @@ public class Dialogue {
 
 	}
 
+	public void ending(){
+		System.out.println(getName() + " you are totally a");
+	}
 }
