@@ -45,7 +45,7 @@ public String[] questions =  {
 			// 11. Aquarius 12. Pisces
 			//REPLY: Very revealing. Let's move on		    
 			
-			String.format("Choose your dream job from this list.%n 1 – Entrepreneur%n 2 – Designer%n 3 – Architect%n 4 – CEO%n 5 – Musician%n"
+		    String.format("Choose your dream job from this list.%n 1 – Entrepreneur%n 2 – Designer%n 3 – Architect%n 4 – CEO%n 5 – Musician%n"
 					+ " 6 – Teacher%n 7 – Diplomat%n 8 – Detective%n 9 - Public Relations%n 10 - Scientist%n 11 - Artist%n 12 – Nurse%n"
 					+ " 13 – My dream job isn't on this list!"),
 			// 1.Aries 2.Taurus 3.Gemini 4.Cancer 5.Leo 6.Virgo 7.Libra 8.Scorpio 9.Sagittarius 10.Capricorn 
@@ -67,7 +67,7 @@ public String[] questions =  {
 		    String.format("What do people do that really makes you mad?%n 1 – People who take forever to text back%n 2 – People who don't clean up after themselves%n"
                     + " 3 - People who interrupt you when you're talking%n 4 - People who are forgetful%n 5 – People who don't pay enough attention%n"
                     + " 6 – People complain to them often%n 7 – People who don't like loud music%n 8 - People who aren't open books%n"
-                    +  " 9 - People who don't speak their mind%n 10 – People who want to borrow things%n 11 – People who like to tease you%n 12 – People who are sarcastic%n"),
+                    +  " 9 - People who don't speak their mind%n 10 – People who want to borrow things%n 11 – People who like to tease you%n 12 – People who are sarcastic"),
 			// 1.Aries 2.Taurus 3.Gemini 4.Cancer 5.Leo 6.Virgo 7.Libra 8.Scorpio 9.Sagittarius 10.Capricorn 
 			// 11. Aquarius 12. Pisces
 		    //REPLY: Ugh, me too girl, me too.
@@ -115,25 +115,40 @@ public String[] questions =  {
 		    		+ "%n 2 - Changes address, phone number, name and facebook status%n 3 - You had a plan B anyways so whatever%n 4 - You take all the mutual friends "
 		    		+ "in the break up%n 5 - Throw everything they own out the window%n 6 - Talk an endless amount of trash on your ex%n 7 - Wait a few years and then crash "
 		    		+ "their wedding%n 8 - Become a professional detective%n 9 - *never gets broken up with*%n 10 - They haven't broken up yet because you require them to submit "
-		    		+ "an essay about why they want to break up first%n 11 - Try to date all their friends%n 12 - Convince them to get back together and then dump them instead%n"),
+		    		+ "an essay about why they want to break up first%n 11 - Try to date all their friends%n 12 - Convince them to get back together and then dump them instead"),
 			// 1.Aries 2.Taurus 3.Gemini 4.Cancer 5.Leo 6.Virgo 7.Leo 8.Scorpio 9.Sagittarius 10.Capricorn 
 			// 11. Aquarius 12. Pisces 
 			//REPLY: I mean.. I guess that sounds reasonable?
-			
-	/*	    String.format("What do you think you would find your best friend saying behind your back? If you don't have a best friend- well then I guess use your imagination%n 1 - \""
+
+		    String.format("What do you think you would find your best friend saying behind behind your back? If you don't have a best friend.. well then I guess use your imagination.%n"
+		    			+ " 1 - They remind me of an invertebrate. Completely spineless%n"
+		    			+ " 2 - OMG. They have a cold again so obviously life as we know it is over. %n"
+		    			+ " 3 - They think they know everything don't they? Well last week they used the wrong you're.%n"
+		    			+ " 4 - Level 100 Clinger. They seriously need to let go%n"
+		    			+ " 5 - They would seriously break their own fingers to be the center of attention%n"
+		    			+ " 6 - Don't invite them anywhere, they are the flakiest person you've ever met%n"
+		    			+ " 7 - Have they ever made a decision in their life? Not that I can think of%n"
+		    			+ " 8 - Just between you and me... I genuinely think they're evil.%n"
+		    			+ " 9 - It's them or the highway, and I'm about 5 seconds from choosing the highway%n"
+		    			+ " 10 - They make the WORST choices and then act like it isn't actually 100%% their own fault%n"
+		    			+ " 11 - They are lowkey the most petty person I have ever met"
+		    			+ " 12 - I didn't think it was physically possible to move as slow as they do"
+		    			+ " and don't even think they wouldn't talk about you behind you're back, they've got a lot to talk about. Choose one."),
+		    /*
+	    String.format("What do you think you would find your best friend saying behind your back? If you don't have a best friend - well then I guess use your imagination%n 1 - \""
 		    		+ "%s reminds me of an invertebrate. Completely spineless.\"%n 2 - \"%s has a cold again so obviously life as we know it is over.%n 3 - \"%n thinks they know "
 		    		+ "everything don't they? Well last week they used the wrong you're.\"%n 4 -\"Level 100 Clingon. %s seriously needs to let go.\"%n 5 - \"%s would literally break "
 		    		+ "their own fingers to be the center of attention\"%n 6 - \"Don't invite %s anywhere. They are the flakiest person you've ever met.\"%n 7 - \"Has %s ever made a "
 		    		+ "decision in their life? Not that I can think of.\"%n 8 - \"Just between you and me... I genuinly think %s is evil\"%n 9 - \"It's %s's way or the highway. And "
-		    		+ "I'm about five seconds from choosing the highway.\"%n 10 - \"%s makes the worst choices and then acts like it isn't actually 100% their own fault\"%n 11 - \""
+		    		+ "I'm about five seconds from choosing the highway.\"%n 10 - \"%s makes the worst choices and then acts like it isn't actually 100%% their own fault\"%n 11 - \""
 		    		+ "%s is lowkey the most petty person I have ever met\"%n 12 - \"I didn't think it was physically possible to move as slow as %s\"%n My best friend would never"
-		    		+ "talk about me behind my back"),
+		    		+ "talk about me behind my back", dialogue.getName()),
 			// 1.Aries 2.Taurus 3.Gemini 4.Cancer 5.Leo 6.Virgo 7.Leo 8.Scorpio 9.Sagittarius 10.Capricorn 
 			// 11. Aquarius 12. Pisces 13.
 			//REPLY: SPICY! I think I know exactly what your sign is.
 		    
 		    //HAHA yes they would. They've got a lot to talk about. Now choose one.  
-		    
-	*/
+		   
+*/
 	};
 }
