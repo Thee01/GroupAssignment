@@ -18,7 +18,13 @@ public class ZodiacGame {
 		
 		for (int i = 1; i <= 12; i++) { 
 			displayQuestions(i);
-			getInput();
+			// if on question 5,8 or 11 will call the method that will help get
+			// user input for the 13 option
+			if (i == 5 || i == 8 || i == 11) {
+				getInputFor13Choice(i);
+			} else {
+				getInput();
+			}
 			System.out.println(dialogue.questionReplies(i));
 			System.out.println();
 			input.nextLine();
@@ -52,6 +58,33 @@ public class ZodiacGame {
 		} while (userChoice < 1 || userChoice > 12);
 	}
 
+	/**
+	 * handles input for when there is a 13th option.
+	 */
+	private static void getInputFor13Choices(int question) {
+		int userChoice = 0;
+		do {
+			userChoice = input.nextInt();
+			if (userChoice < 1 || userChoice > 13) {
+				System.out.println("Are you kidding me? This is really simple. 1-12. Try again");
+			} else if(userChoice == 13) 
+			{
+					switch(question)
+					case 5:
+						dialogue.question5Choice13;
+						break;
+					case 8:
+						dialogue.question8Choice13;
+						break;
+					case 11:
+						dialogue.question11Choice13;
+						break;	
+			}
+			else{
+				calculate.addUserChoice(userChoice);
+			}
+		} while (userChoice < 1 || userChoice > 13);
+	}
 	
 	private static void displayUsersZodiacSign() {
 		int zodiacSignIndex = calculate.getUsersZodiacSign();
